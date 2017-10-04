@@ -29,24 +29,24 @@ bricks[c][r] = { x: 0, y: 0, status: 1 };
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
-document.querySelector(‘body’).addEventListener(‘touchstart’, touchStart, false);
-
-function touchStart(e) {	// recieved an event
-
-	e.preventDefault();
-	var whichArt = e.target;
-	var touch = e.touches[0];
-	var moveOffetX = wichArt.offsetLeft - touch.pageX;
-	var moveOffetX = wichArt.offsetTop - touch.pageY;
-	resetZ();			// Z-index
-	whichArt.style.zIndex = 10;
-	whichArt.addEventListener(‘touchmove’, function() {
-	var positionX = touch.pageX+moveOffsetX;
-	var positionY = touch.pageY+moveOffsetY;
-	whichArt.style.left = positionX + ‘px’;
-	whichArt.style.top = positionY + ‘px’;
-	}, false);
-}
+// document.addEventListener(‘touchstart’, touchStart, false);
+//
+// function touchStart(e) {	// recieved an event
+//
+// 	e.preventDefault();
+// 	var whichArt = e.target;
+// 	var touch = e.touches[0];
+// 	var moveOffetX = wichArt.offsetLeft - touch.pageX;
+// 	var moveOffetX = wichArt.offsetTop - touch.pageY;
+// 	resetZ();			// Z-index
+// 	whichArt.style.zIndex = 10;
+// 	whichArt.addEventListener(‘touchmove’, function() {
+// 	var positionX = touch.pageX+moveOffsetX;
+// 	var positionY = touch.pageY+moveOffsetY;
+// 	whichArt.style.left = positionX + ‘px’;
+// 	whichArt.style.top = positionY + ‘px’;
+// 	}, false);
+// }
 
 function keyDownHandler(e) {
 if(e.keyCode == 39) {
